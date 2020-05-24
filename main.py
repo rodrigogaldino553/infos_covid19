@@ -26,11 +26,6 @@ def find_country(country):
 
 
 
-
-    
-
-
-
 def show_data(dictionary):
     for key, info in dictionary.items():
         print(f'{key:.<28}{info}')
@@ -66,30 +61,22 @@ while True:
             break
             
             
-
-
-
+    print('*'*36)
+    print('Wait a moment...')
+    print('*'*36)
     
     if opc == '1':
         url = make_url('summary')
-        
-        print('*'*36)
-        print('Wait a moment...')
-        print('*'*36)
         
         show_data(get_data(url)["Global"])
     
     elif opc == '2':
         country = str(input('Type a country: ')).strip().title()
        
-        print('*'*36)
-        print('Wait a moment...')
-        print('*'*36)
-       
         show_data(find_country(country))
     
     elif opc == 'i':
-        print('This option is not available!')
+        print('This option is available now!')
 
     else:
         print('*'*36)
