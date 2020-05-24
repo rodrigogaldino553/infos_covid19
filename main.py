@@ -26,8 +26,8 @@ def find_country(country):
 
 
 
-def format_data():
-    pass
+
+    
 
 
 
@@ -66,9 +66,9 @@ while True:
             break
             
             
-    print('*'*36)
-    print('Wait a moment...')
-    print('*'*36)
+
+
+
     
     if opc == '1':
         url = make_url('summary')
