@@ -51,7 +51,6 @@ while True:
         print('*'*36)
         print('* [1] Show data world              *')
         print('* [2] Show data country            *')
-        print('* [3] Show city data               *')
         print('* [0] Exit                         *')
         print('* [i] How prevent                  *')
         print('*'*36)
@@ -59,7 +58,7 @@ while True:
    
         opc = input(' : ').strip()
         
-        if opc not in '0123i':
+        if opc not in '012i':
             os.system("clear")
             print(f'ERROR!! "{opc}" This option do not exists!')
         
@@ -89,6 +88,9 @@ while True:
        
         show_data(find_country(country))
     
+    elif opc == 'i':
+        print('This option is not available!')
+
     else:
         print('*'*36)
         print('Wait a moment...')
