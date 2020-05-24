@@ -79,10 +79,6 @@ while True:
         print('This option is available now!')
 
     else:
-        print('*'*36)
-        print('Wait a moment...')
-        print('*'*36)
-        
         exit()
     
     
