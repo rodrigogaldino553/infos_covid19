@@ -34,7 +34,7 @@ def find_country(country):
 def format_data():
     pass
 
-
+  
 def show_data(dictionary):
     for key, info in dictionary.items():
         print(f'{key:.<28}{info}')
@@ -54,13 +54,13 @@ def program():
         print(f'ERROR!! "{opc}" This option do not exists!')
         return program()
 
-
+      
 def wait():
     print('*'*36)
     print('Wait a moment...')
     print('*'*36)
 
-
+   
 print('loading libs...')
 while True:
     clear()
@@ -72,17 +72,15 @@ while True:
     if opc == '1':
         url = make_url('summary')
         wait()
-
         show_data(get_data(url)["Global"])
 
     elif opc == '2':
         country = str(input('Type a country: ')).strip().title()
         wait()
-
         show_data(find_country(country))
 
     elif opc == 'i':
-        print('This option is not available!')
+        print('This option is available now!')
 
     else:
         wait()
@@ -90,7 +88,6 @@ while True:
 
     print('*'*36)
     cont = str(input('Do you want see more[Y/N]: ')).upper()
-
     if 'N' in cont:
         break
 
