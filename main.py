@@ -77,7 +77,6 @@ while True:
 
     if opc == '1':
         url = make_url('summary')
-        wait()
         show_data(get_data(url)["Global"])
 
     elif opc == '2':
