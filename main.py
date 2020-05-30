@@ -22,7 +22,8 @@ def get_data(url):
         data = requests.get(url).json()
         return data
     except:
-        return 'ERROR!! Did not possible get infos'
+        print('ERROR!! Did not possible get infos')
+        exit()
     
 
 
@@ -32,6 +33,7 @@ def find_country(country):
     for c in range(0, len(countries)):
         if country in countries[c]["Country"]:
             return countries[c]
+
     return f"ERROR! Couldn't find {country}"
 
 
