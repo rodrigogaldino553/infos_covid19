@@ -18,8 +18,12 @@ def make_url(complement):
 
 
 def get_data(url):
-    data = requests.get(url).json()
-    return data
+    try:
+        data = requests.get(url).json()
+        return data
+    except:
+        return 'ERROR!! Did not possible get infos'
+    
 
 
 def find_country(country):
@@ -31,13 +35,13 @@ def find_country(country):
     return f"ERROR! Couldn't find {country}"
 
 
-def format_data():
-    pass
-
   
 def show_data(dictionary):
-    for key, info in dictionary.items():
-        print(f'{key:.<28}{info}')
+    try:
+        for key, info in dictionary.items():
+            print(f'{key:.<28}{info}')
+    except:
+        print('ERROR! Did not possible show infos!')
 
 
 def program():
